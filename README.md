@@ -1,6 +1,6 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: Janani Gowrisankar </h3>
+<h3>Register Number: 212224100022</h3>
 
 
 <h3>AIM:</h3>
@@ -40,3 +40,69 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+
+<H3>PROGRAM</H3>
+
+```
+class VacuumCleanerAgent:
+  def init(self): # Initialize the agent's state (location and dirt status)
+  self.location = "A" # Initial location (can be "A" or "B")
+  self.dirt_status = {"A": False, "B": False} # Initial dirt status (False means no dirt)
+  def move_left(self):
+    # Move the agent to the left if possible
+    if self.location == "B":
+        self.location = "A"
+
+def move_right(self):
+    # Move the agent to the right if possible
+    if self.location == "A":
+        self.location = "B"
+
+def suck_dirt(self):
+    # Suck dirt in the current location if there is dirt
+    if self.dirt_status[self.location]:
+        self.dirt_status[self.location] = False
+        print(f"Sucked dirt in location {self.location}")
+
+def do_nothing(self):
+    # Do nothing
+    pass
+
+def perform_action(self, action):
+    # Perform the specified action
+    if action == "left":
+        self.move_left()
+    elif action == "right":
+        self.move_right()
+    elif action == "suck":
+        self.suck_dirt()
+    elif action == "nothing":
+        self.do_nothing()
+    else:
+        print("Invalid action")
+
+def print_status(self):
+    # Print the current status of the agent
+    print(f"Location: {self.location}, Dirt Status: {self.dirt_status}")
+```
+
+<H3>Example usage:</H3>
+
+agent = VacuumCleanerAgent()
+
+<H3>Move the agent, suck dirt, and do nothing</H3>
+
+agent.perform_action("left") 
+agent.print_status() 
+agent.perform_action("suck") 
+agent.print_status() 
+agent.perform_action("nothing") 
+agent.print_status()
+
+<H3>OUTPUT</H3>
+
+<img width="746" alt="Screenshot 2025-04-27 at 16 56 49" src="https://github.com/user-attachments/assets/45a4d91b-d321-48d3-a7d9-0bb0120bc0ec" />
+
+
+<H3>RESULT</H3>
+Thus, an AI agent is developed.
